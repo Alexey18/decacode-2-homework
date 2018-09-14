@@ -13,11 +13,13 @@ console.log(average);
 */
 
 
-function leapYear(year){
-    if (year % 400 !== 0 & year % 100 == 0 || year % 4 !== 0) return 'not leap';
-    return 'leap';
+function pangram(str){
+    let list = [];
+    for (i = 0, i < str.length, i++){
+        list.push(str[i]);
+    }
+    list = unique(list);
+    console.log(list.length);
 }
 
-for (i = 1900; i < 2018; i++){
-    console.log(i + " is " + leapYear(i) + ' year.');
-}
+pangram('The quick brown fox jumps over the lazy dog')
